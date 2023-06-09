@@ -1,0 +1,308 @@
+body{
+    margin: 0px;
+    padding: 0px;
+  
+}
+
+
+#header
+{
+    background: #1D2228;
+    margin:  0; 
+    width: auto;
+    padding: 0.3%;
+    color: #f1f2e7f5;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* menu ko CSS starts */
+    #menu
+    {
+        background: #FF6864;
+        width: 100%;
+        height: 100px;
+        margin: auto;
+       
+    }
+    nav {
+        position: relative;
+        width: 100%;
+        height: 0px;
+        background-color: #FF6864;
+        border-radius: 0px;
+        font-size: 0px;
+        text-align: center;
+        } 
+     nav a {
+        line-height: 100px;
+        height: 10%;
+        font-size: 24px;
+       font-weight: 500;
+        box-sizing: content-box;
+        padding: 5%;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        position: relative;
+        z-index: 1;  /*menu ko font lai mathi lyaucha */
+        text-decoration: none;
+        text-transform: uppercase; 
+        text-align: center;
+        color: #E8EAE3;
+        cursor:pointer;
+    } 
+    /* nav .animation {
+        position: absolute;
+        width: 100%;
+        height: 60%;
+        top: 20%;
+        z-index: 0;
+        transition: all .5s ease 0s;
+        border-radius: 15px;
+        padding-left: 5%;
+        opacity: 0.7;
+    
+    } 
+
+    nav .start-home, a:nth-child(1):hover~.animation {
+        width: 150px; 
+        left: 255px;
+        background-color: #E8EAE3;
+    }
+    nav .start-about, a:nth-child(2):hover~.animation {
+        width: 275px;  
+        left: 520px;
+        background-color: #1abc9c;
+    }
+    nav .start-blog, a:nth-child(3):hover~.animation {
+        width: 290px;
+        left: 900px;
+    
+        background-color: #3498db;
+    }
+    nav .start-portefolio, a:nth-child(4):hover~.animation {
+        width: 280px;
+        left: 1300px;
+        
+        background-color: #9b59b6;
+    } */
+/* menu ko CSS ends */
+
+h4
+{
+    float: left;
+    width: 30%;
+    font-size: 140%;
+    font-weight: bolder;
+    text-align: justify;
+    text-indent: 55%; /* kati spacing vanera from left */
+}
+#body
+{
+    background: #E8EAE3;
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+}
+#footer
+{
+    background: #1D2228;
+    margin:  auto; 
+    width: auto;
+    height: fit-content;
+    padding: 0.1%;
+    color: #f1f2e7f5;
+}
+#left
+{
+    float: left;
+    padding-top: 2%;
+   font-size: larger;
+   font-weight:bolder;
+
+}
+#right
+{
+    float: right;
+    padding-top: 2%;
+   font-size: larger;
+   font-weight:bolder;
+}
+
+button {  
+background: #FF6864;
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+border: 1px solid rgba(220, 199, 170, 0.56);
+border-radius: 20px;  
+width: auto;  
+color: rgb(0, 0, 0);   
+padding: 8px;   
+margin: auto;     
+cursor: pointer;   
+}  
+a{
+text-decoration: none;
+}
+button:hover {   
+opacity: 0.7;   
+}   
+a:hover /* mouse over link */
+{
+color:crimson;
+}
+
+a:link /* unvisited link */
+{
+color: black;
+
+} 
+
+a:visited /* visited link */
+{
+color: black;
+}
+.social{
+    margin-top: 1%;
+    margin-bottom: -1%;
+
+}
+.bodyopen{
+    padding: 0%;
+    margin: 0%;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-size: x-large;
+}
+
+
+/* ABOUT ME KO CSS */
+.text{
+width: 540px;
+}
+.text h2{
+font-size: 90px;
+font-weight: 600;
+margin-bottom: 5px;
+margin-top: 0px;
+
+}
+.text h5{
+font-size: 22px;
+font-weight: 500;
+margin-bottom: 20px;
+}
+.pic{
+height: auto;
+width:  302px;
+border-radius: 20px ;
+}
+.about{
+
+width: 100%; 
+margin: auto;
+width: 1130px;
+max-width: 85%;
+margin: auto;
+display: flex;
+padding-top: 20px;
+align-items: center;
+justify-content: space-around;
+padding-bottom: 20px;
+}
+
+.text p{
+font-size: 20px;
+line-height: 25px;
+letter-spacing: 1px;
+}
+.data{
+margin-top: 30px;
+}
+.hire{
+font-size: 18px;
+background: #FF6864;
+color: #fff;
+text-decoration: none;
+border: none;
+padding: 8px 25px;
+border-radius: 6px;
+transition: 0.9s;
+}
+.hire:hover{
+background: #4070f4; 
+border: 1px solid #E8EAE3;
+}
+/* ABOUT ME KO CSS END */
+
+/* OUR SERVICES CSS */
+.content{
+margin-top: 10px;
+width: auto;
+height: auto;
+padding:0%;
+}
+.content h1{
+font-size: 60px;
+font-weight: 400;
+font: 100;
+text-align: center;
+position: relative;
+font-weight: 600;
+padding-top: 20px;
+margin-top: 0px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.content h1::after{
+content: "";
+width: 270px;
+height: 6px;
+position: absolute;
+background-color: #FF6864;
+bottom: 0px;
+transform: translate(-50%);
+left: 50%;
+}
+.service{
+padding: 5px 10px;
+margin: 10px;
+text-align: center;
+margin-top: 0px;
+font-size: 20px;
+gap: 3px;
+padding: 3px 4px 4px;
+cursor: pointer;
+border-radius: 70px;
+
+}
+.service p{
+padding-bottom: 40px;
+font-size: 25px;
+font-weight: 400;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+.service i{
+font-size: 50px;
+padding-top: 4px; 
+color: #FF6864;
+}
+.service i:hover{
+font-size: 70px;
+/* padding-top: 3px; */
+color: rgb(228, 228, 228);
+}
+.service:hover{
+background-color:#FF6864;
+color: black;
+font-size: 35px;
+transition: all 0.5s  ease-in-out;
+
+}
+.include{
+display: grid;
+grid-gap: 30px;
+grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+}
+/* OUR SERVICES CSS ENDS*/
