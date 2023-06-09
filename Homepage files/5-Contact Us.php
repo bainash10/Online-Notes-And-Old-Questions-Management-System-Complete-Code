@@ -46,7 +46,7 @@ textarea {
   padding-top:10px;
   padding-bottom:10px;
   transition: all 0.3s; 
-  margin-top:-4px;
+  margin-top:14px;
   font-weight:700;
 }
 [type="submit"]:hover { 
@@ -57,15 +57,78 @@ textarea {
 </head>
 
 <body>
-  <!-- <form id="contactForm" action="comment.php" method="GET" onsubmit="validateForm(event)">     -->
-    <form id="contactForm" action="comment.php" method="post" >    
+
+
+
+
+    <form id="contactForm" action="comment.php" method="post" enctype="multipart/form-data">    
       <caption> <center> <h1> <img src="../Images/operator.png" width="40px">Contact Us</center></h1></caption>  
         <input id="name" name="name" type="text" class="feedback-input" placeholder="Name" required/>   
         <input id="email" name="email" type="email" class="feedback-input" placeholder="Email" required/>
-        <!-- <script src="/JavaScript Files/contact us Validation.js"></script>   -->
-        <textarea id="text"  name="text" class="feedback-input" placeholder="Comment"></textarea>
+        <textarea id="message"  name="message" class="feedback-input" placeholder="Comment"></textarea>
+        <input type="file" name="pdfFile" id="pdfFile" accept="application/pdf" required>
         <input type="submit" value="SUBMIT"/>
       </form>
+
+      <script>
+            const contactForm = document.getElementById('contactForm');
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const messageInput = document.getElementById('message');
+            const fileInput = document.getElementById('pdfFile');
+          
+            contactForm.addEventListener('submit', function(event) {
+              event.preventDefault();
+          
+              // Validate the form fields
+              if (validateForm()) {
+                // If validation is successful, submit the form
+                this.submit();
+              }
+            });
+          
+            function validateForm() {
+              const name = nameInput.value;
+              const email = emailInput.value;
+              const message = messageInput.value;
+            //   const file = fileInput.files[0];
+              // Perform validation checks
+              if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+                alert('Please fill in all fields.');
+                return false;
+              }
+          
+              if (!validateEmail(email)) {
+                alert('Please enter a valid email address.');
+                return false;
+              }
+            //   if (file && !validateFile(file)) {
+            //     alert('Please select a valid file.');
+            //     return false;
+            //   }
+            var filePath = fileInput.value;
+            var allowedExtensions = /(\.pdf)$/i;
+
+            if (!allowedExtensions.exec(filePath)) {
+                alert('Invalid file type. Only PDF files are allowed.');
+                fileInput.value = '';
+                return false;
+            }
+              return true;
+            }
+          
+            function validateEmail(email) {
+              const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              return regex.test(email);
+            }
+          
+            // function validateFile(file) {
+            //   const allowedExtensions = ['jpg', 'jpeg', 'png', 'gif'];
+            //   const fileExtension = file.name.split('.').pop().toLowerCase();
+            //   return allowedExtensions.includes(fileExtension);
+            // }
+          </script>
+
    
 </body>
 </html> 
