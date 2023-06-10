@@ -1,3 +1,7 @@
+<?php
+//include auth_session.php file on all user panel pages
+include("auth_session.php");
+?>
 <html>
     <head><title>Homepage</title>
       <link rel="stylesheet" href="main.css">
@@ -6,17 +10,16 @@
     <body>
       
     <div id="header">
-        <!-- <div id="left"><button><a href="Homepage files/4-login.php" target="_blank">Login</a></button></div>
-        <div id="right"><button><a href="Homepage files/3-Register.php" target="_blank">Sign Up</a></button></div> -->
+        <div id="right"><button><a href="logout.php">Logout</a></button></div> 
             <center><h2 style="padding: 0%;">ONLINE NOTES AND OLD QUESTIONS</h2></center>
         </div>
-<!-- menu part -->
+<!-- menu part  -->
 <div id="menu">
         <nav>
             <a href="#"><img src="Images/home.png" width="25px">Home</a>
             <a href="Homepage files/1-Online Notes.php" target="_blank"> <img src="Images/Online Notes.png" width="25px">Online Notes</a>
             <a href="Homepage files/2-Old Questions.php" target="_blank"><img src="Images/Old Questions.png" width="23px">Old Questions</a>
-            <a href="Homepage files/5-Contact Us.php" target="_blank"><img src="Images/contact.png" width="25px">Contact Us</a>
+            <a href="Homepage files/3-Contact Us.php" target="_blank"><img src="Images/contact.png" width="25px">Contact Us</a>
             <div class="animation start-home"></div>
           </nav>  
         </div>  

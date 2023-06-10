@@ -26,6 +26,6 @@ var dotposition=email.lastIndexOf(".");
     // ...
     // Example: Send form data to the server using AJAX
   
-    alert("Signup successful!");
+    alert("Sent successful!");
     document.getElementById("signupForm").reset(); // Reset the form
   }
