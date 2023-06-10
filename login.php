@@ -82,10 +82,26 @@ h3 {
         $result = mysqli_query($con, $query) or die(mysql_error());
         $rows = mysqli_num_rows($result);
         if ($rows == 1) {
-            $_SESSION['username'] = $username;
-            // Redirect to user dashboard page
-            header("Location: main.php");
-        } else {
+            if ($username === "admin" && $password === "admin") {
+                        $_SESSION['username'] = $username;
+                        header("Location: admin.php");
+                    }
+                     else {
+                        $_SESSION['username'] = $username;
+                        header("Location: main.php");
+                    }
+        }
+    //     if($rows ==1 )
+    //     {
+    //     if ($username === "admin" && $password === "admin") {
+    //         $_SESSION['username'] = $username;
+    //         header("Location: admin.php");
+    //     }
+    //      else {
+    //         header("Location: main.php");
+    //     }
+    // }
+         else {
             echo "<div class='form'>
                   <h3>Incorrect Username/password.</h3><br/>
                   <p class='link'>Click here to <a href='login.php'>Login</a> again.</p>
