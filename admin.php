@@ -79,10 +79,12 @@ h2
        </caption>
             <thead>
                 <tr>
+                    <th>Id</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Message</th>
                     <th>File</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -92,9 +94,10 @@ h2
             $email = $row['email'];
             $message = $row['message'];
             $file_name = $row['pdf_file'];
-
+            $contact_id = $row['id'];
 ?>
              <tr>
+                <td><?php echo $contact_id; ?></td>
                 <td><?php echo $name; ?></td>
                 <td><?php echo $email; ?></td>
                 <td><?php echo $message; ?></td>
@@ -102,6 +105,12 @@ h2
                     <?php if (!empty($file_name)) { ?>
                         <a href="download.php?file=<?php echo urlencode($file_name); ?>"><?php echo $file_name; ?></a>
                     <?php } ?>
+                </td>
+                <td>
+                    <form method="post" action="delete.php">
+                        <input type="hidden" name="contact_id" value="<?php echo $contact_id; ?>">
+                        <button type="submit" name="delete" onclick="return confirm('Are you sure you want to delete this entry?')" style="width:100%;">Delete</button>
+                    </form>
                 </td>
         </tr>
 <?php
