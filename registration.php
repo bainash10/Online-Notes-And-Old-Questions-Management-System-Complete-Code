@@ -96,14 +96,55 @@ h3 {
         }
     } else {
 ?>
-    <form class="form" action="" method="post">
+    <form id="form" class="form" action="" method="post">
         <h1 class="login-title">Registration</h1>
         <input type="text" class="login-input" name="username" placeholder="Username" required />
-        <input type="text" class="login-input" name="email" placeholder="Email Adress">
-        <input type="password" class="login-input" name="password" placeholder="Password">
+        <input type="email" class="login-input" name="email" placeholder="Email Adress" required>
+        <input type="password" class="login-input" name="password" placeholder="Password" required>
+        
         <input type="submit" name="submit" value="Register" class="login-button">
         <p class="link">Already have an account? <a href="login.php">Login here</a></p>
     </form>
+    
+    <!-- <script>
+            const form = document.getElementById('form');
+            const nameInput = document.getElementById('username');
+            const emailInput = document.getElementById('email');
+          
+          
+            form.addEventListener('submit', function(event) {
+              event.preventDefault();
+          
+              // Validate the form fields
+              if (validateForm()) {
+                // If validation is successful, submit the form
+                this.submit();
+              }
+            });
+          
+            function validateForm() {
+              const name = nameInput.value;
+              const email = emailInput.value;
+          
+              if (name.trim() === '' || email.trim() === '') {
+                alert('Please fill in all fields.');
+                return false;
+              }
+          
+              if (!validateEmail(email)) {
+                alert('Please enter a valid email address.');
+                return false;
+              }
+              return true;
+            }
+          
+            function validateEmail(email) {
+              const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              return regex.test(email);
+            }
+    
+          </script> -->
+
 <?php
     }
 ?>

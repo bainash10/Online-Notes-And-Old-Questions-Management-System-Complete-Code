@@ -5,13 +5,14 @@ include("auth_session.php");
 <html>
     <head><title>Homepage</title>
       <link rel="stylesheet" href="main.css">
+
     </head>
     
     <body>
       
     <div id="header">
         <div id="right"><button><a href="logout.php">Logout</a></button></div> 
-            <center><h2 style="padding: 0%;">ONLINE NOTES AND OLD QUESTIONS</h2></center>
+       <center><h2 style="padding: 0%;">  ONLINE NOTES AND OLD QUESTIONS</h2></center>
         </div>
 <!-- menu part  -->
 <div id="menu">
@@ -74,8 +75,6 @@ include("auth_session.php");
         </div>
     </section> 
 <br>
-
-    </div>
 
     <div id="footer">
      

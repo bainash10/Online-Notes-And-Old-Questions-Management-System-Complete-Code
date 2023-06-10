@@ -100,7 +100,7 @@ h4
     background: #E8EAE3;
     width: 100%;
     height: auto;
-    margin: 0px;
+    margin: auto;
     padding: 0px;
     text-align: left;
 }
@@ -305,5 +305,9 @@ display: grid;
 grid-gap: 30px;
 grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
 }
+
 /* OUR SERVICES CSS ENDS*/
+
+  
+  
 
